@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 700px;
+}
+.tabs{
+   margin-right: -90px;
+   margin-left:  20px;
+   font-size: 3rem;
+   margin-top: 40px;
+   color: black;
+  
+
+}
+
+.mycontainer{
+    border-radius: 105px;
+    margin-top: 15px;
+    
+}
+
+.profilephoto{
+    width: 20px;
+    height: 20px;
+    margin-left: 780px;
+    margin-top: -40px;
+
+}

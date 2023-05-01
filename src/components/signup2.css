@@ -1,0 +1,59 @@
+.image8{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:725px;
+    width: 1000px;
+}
+
+.wel{
+    margin-left: 1080px;
+    margin-top: -600px;
+    font-size: 3rem;
+    color: #2680eb;
+}
+.pl{
+    margin-left: 1135px;
+    margin-top: 10px;
+    color: #2680eb;
+}
+.men{
+    height: 150px;
+    width: 150px;
+    margin-left: 1180px;
+    margin-top: 70px;
+    border-radius: 45px;
+
+}
+
+.b1 {
+
+    padding: 10px;
+    border: none;
+    background-color: #2680eb;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 1140px;
+    align-items: center;
+  
+  }
+
+  .b2 {
+
+    padding: 10px;
+    border: none;
+    background-color: #2680eb;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 1220px;
+    align-items: center;
+  
+  }

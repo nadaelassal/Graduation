@@ -1,0 +1,70 @@
+.main_content {
+  margin-left: 150px;
+  font-family: serif;
+  
+}
+.move{
+ 
+  font-size: 4rem;
+  margin-left: 25px;
+  margin-top: 40px;
+  color: black;
+}
+.content {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: black;
+  margin-left: 25px;
+
+}
+.li{
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin-top: 40px;
+  align-items: center;
+}
+.start-button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #2680eb;
+  border-color: #2680eb;
+  color: white;
+  height: 30px;
+  width: 110px;
+}
+.start-icon{
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.model{
+  margin-left: 750px;
+  margin-top: -450px;
+  height: 550px;
+
+}
+
+.fb{
+  height: 35px;
+
+}
+.insta{
+  height: 35px;
+  border-radius: 60px;
+}
+
+.youtube{
+  height: 35px;
+  border-radius: 80px;
+  
+}
+
+.icons{
+  display: flex;
+  gap: 2rem;
+  margin-top: -40px;
+  margin-left: 10px;
+  
+}

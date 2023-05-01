@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.backicon2 {
+  color: #2680eb;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.open {
+  color: #2680eb;
+  height: 10rem;
+  margin-top: 80px;
+  margin-left: 700px;
+}
+.new {
+  color: #2680eb;
+  margin-left: 735px;
+  font-size: xxx-large;
+}
+.passw {
+  color: #2680eb;
+  margin-left: 680px;
+  font-size: xxx-large;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -500px;
+}
+
+.app-wrapper {
+  background-color: inherit;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.forget2 {
+  height: 32px;
+  font-size: 20px;
+  outline: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style: 2px solid black;
+  background-color: rgb(213, 207, 207);
+  position: relative;
+  margin-left: 950px;
+}
+
+span {
+  font-size: 18px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+.loginbutton {
+  padding: 10px;
+  border: none;
+  background-color: #2680eb;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 700px;
+  margin-top: 170px;
+  width: 80px;
+  height: 30px;
+  align-items: center;
+}

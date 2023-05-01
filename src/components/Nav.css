@@ -1,0 +1,47 @@
+.svm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    margin-top: 40px;
+}
+.logo {
+  margin-left: -850px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    font-size: 1.7rem;
+}
+.ul {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: -800px;
+ 
+}
+li {
+  display: flex;
+  list-style: none;
+  margin: 0 1rem;
+  
+  
+
+}
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+.sign_button{
+    border-radius: 12px;
+    cursor: pointer;
+    background-color:  #2680eb;
+    border-color: #2680eb;
+    color: white;}
+
+.pro {
+  height: 40px;
+  margin-top: -8px;
+}
