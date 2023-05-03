@@ -11,7 +11,7 @@ import PlaceIcon from "@mui/icons-material/Place";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ReplyIcon from "@mui/icons-material/Reply";
-import "./Mypage.css";
+import "./css code/Mypage.css";
 import "./Nav2";
 import Nav from "./Nav2";
 import { Container } from "@mui/material";

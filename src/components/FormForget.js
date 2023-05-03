@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import { useState } from "react";
-import "./FormForget.css";
+import "./css code/FormForget.css";
 
 function FormForget(props) {
   const [focused, setFocused] = useState(false);

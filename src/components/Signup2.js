@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import signup2 from "./signup2.jpg";
-import "./signup2.css";
+import "./css code/signup2.css";
 import men from "./men.jpg";
 import { Link } from "react-router-dom";
 

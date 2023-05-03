@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "./Home.css";
+import "./css code/Home.css";
 import model from "./model.png";
 import { Link } from "react-router-dom";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";

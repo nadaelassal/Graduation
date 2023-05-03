@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.img-signin {
+  width: 60vw;
+  height: 100vh;
+}
+.welcome-p {
+  color: #2680eb;
+  font-size: 2.5rem;
+  margin-left: 1070px;
+  margin-top: -600px;
+  font-weight: bolder;
+}
+.input-holder1 {
+  margin-top: 40px;
+  margin-left: 538px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgb(213, 207, 207);
+  font-size: larger;
+}
+.input-holder2 {
+  margin-top: 30px;
+  margin-left: 538px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgb(213, 207, 207);
+  font-size: larger;
+}
+.button-container-login {
+  margin-top: 90px;
+  margin-left: 1150px;
+  border-radius: 15px;
+  width: 100px;
+  height: 35px;
+  font-size: 23px;
+  cursor: pointer;
+  background-color:  #2680eb;
+  border-color: #2680eb;
+  color: white;
+}
+
+.signup-button{
+  margin-top: 40px;
+  margin-left: 1150px;
+  font-size: 23px;
+  background-color:  #2680eb;
+  border-color: #2680eb;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100px;
+  height: 35px
+}
+
+
+.forget-button{
+  margin-top: 10px;
+ margin-left: 1060px;
+ font-size: large;
+ color: rgb(75, 75, 75);
+}
+
+
+
+

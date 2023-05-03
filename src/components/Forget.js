@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "./Forget.css";
+import "./forget.css";
 import lock from "./lock.png";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { Link } from "react-router-dom";

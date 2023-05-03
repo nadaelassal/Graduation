@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import fit from "./fit.png";
 import { Button, CardActions } from "@mui/material";
-import "./Card3.css";
+import "./css code/Card3.css";
 import { Link } from "react-router-dom";
 
 export default function MediaControlCard3() {

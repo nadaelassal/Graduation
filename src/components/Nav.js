@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 
 import React from "react";
-import "./Nav.css";
+import "./css code/Nav.css";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
 

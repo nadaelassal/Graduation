@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Thirdform.css';
+import './css code/Thirdform.css';
 
 function Thirdform(props) {
     const [focused, setFocused] = useState(false);

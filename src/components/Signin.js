@@ -83,95 +83,103 @@ const SignUp = () => {
 };
 
 export default SignUp;*/
+
 import React, { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import Home from "./Home";
+import { Link, useNavigate } from "react-router-dom";
+import "./Home";
+import "./css code/signin.css";
+import { Pattern } from "@mui/icons-material";
+import log from "./log.jpg";
+import "./SignUp";
 
 function Signin() {
-  // React States
-  const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-  // User Login info
-  const database = [
-    {
-      username: "user1",
-      password: "pass1",
-    },
-    {
-      username: "user2",
-      password: "pass2",
-    },
-  ];
+  const validateEmail = (value) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(value);
+  };
 
-  const errors = {
-    uname: "invalid username",
-    pass: "invalid password",
+  const validatePassword = (value) => {
+    const passwordPattern =
+      /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+    return passwordPattern.test(value);
   };
 
   const handleSubmit = (event) => {
-    //Prevent page reload
     event.preventDefault();
+    const newErrors = {};
 
-    var { uname, pass } = document.forms[0];
-
-    // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
-
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
+    if (!validateEmail(email)) {
+      newErrors.email = "Invalid email format";
     }
+
+    if (!validatePassword(password)) {
+      newErrors.password =
+        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      // Login successful, navigate to home page
+      navigate("/home");
+    }
+
   };
-
-  // Generate JSX code for error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
-
-  // JSX code for login form
-  const renderForm = (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className="input-container-u">
-          <label>Username </label>
-          <input type="text" name="uname" required />
-          {renderErrorMessage("uname")}
-        </div>
-        <div className="input-container-p">
-          <label>Password </label>
-          <input type="password" name="pass" required />
-          {renderErrorMessage("pass")}
-        </div>
-
-        <div className="button-container">
-          <input type="submit"  to="/Home"/>
-        </div>
-      </form>
-    </div>
-  );
 
   return (
     <div>
       <div className="login-form">
-        {isSubmitted ? (
-         <div>
-         <Link to="/Home">
-           
-         </Link>{" "}
-         </div>
-        ) : (
-          renderForm
-        )}
+        <div>
+          <img src={log} className="img-signin" />
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <div className="welcome-p">Welcome Back !</div>
+          <div className="input-holder1">
+            <input
+              className="input-holder1"
+              type="email"
+              name="email"
+              placeholder="Enter Your E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            {errors.email && <div className="error">{errors.email}</div>}
+          </div>
+          <div className="input-holder2">
+            <input
+              className="input-holder2"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {errors.password && <div className="error">{errors.password}</div>}
+          </div>
+          <li>
+            <Link to="/Forget">
+              <p className="forget-button"> Forget password</p>
+            </Link>
+          </li>
+          <div>
+            <button type="submit" className="button-container-login">
+              Login
+            </button>
+          </div>
+        </form>
+        <div>
+          <button onClick={() => navigate("/SignUp")} className="signup-button">
+            Sign up
+          </button>
+        </div>
       </div>
     </div>
   );
