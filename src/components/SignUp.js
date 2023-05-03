@@ -111,8 +111,7 @@ export default SignUp;*/
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Pattern } from "@mui/icons-material";
-import "./css code/signup.css";
+import "./css code/signup.css"
 import "./Home";
 import sign from "./sign.jpg";
 

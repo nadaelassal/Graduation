@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+/*import React from "react";
 import "./forget2.css";
 import open from "./open.png";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
@@ -79,4 +79,78 @@ function Forget2() {
   );
 }
 
-export default Forget2;
+export default Forget2;*/
+
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Pattern } from "@mui/icons-material";
+import "./forget2.css";
+import open from "./open.png";
+import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
+import "./Forget";
+
+function Signin() {
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
+
+  const validatePassword = (value) => {
+    const passwordPattern =
+      /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+    return passwordPattern.test(value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newErrors = {};
+
+    if (!validatePassword(password)) {
+      newErrors.password =
+        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      // Login successful, navigate to home page
+      navigate("/home");
+    }
+  };
+
+  return (
+    <div>
+      <Link to="/Forget" className="backicon2">
+        <ArrowBackOutlinedIcon fontSize="large" className="backicon2" />
+      </Link>
+      <div>
+        <img src={open} className="open-img" />
+      </div>
+      <h1 className="new">New </h1>
+      <h2 className="passw"> Password</h2>
+
+      <div className="login-form-4">
+        <form onSubmit={handleSubmit}>
+          <div className="input-holder-forget2">
+            <input
+              className="input-holder-forget2"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {errors.password && <div className="error">{errors.password}</div>}
+          </div>
+          <div>
+            <button type="submit" className="button-container-login-2">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default Signin;
