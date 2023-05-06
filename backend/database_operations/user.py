@@ -73,3 +73,34 @@ class UserRegistration:
         print(f"email '{email}' has been registered successfully")
         return True
 
+class UserLogin:
+    def __init__(self, connection,DBN):
+        self.user_dao = UserDAO(connection,DBN)
+
+    def authenticate_user(self, email, password):
+        # Retrieve user information from the database based on the username
+        user_info = self.user_dao.retrieve_user_information(email)
+        
+        if user_info is None:
+            print(f"email '{email}' does not exist")
+            return False
+
+        # Check if the provided password matches the stored hash
+        hashed_password = user_info['password']
+        if bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
+            print(f"User '{email}' has been authenticated successfully")
+            return True
+        else:
+            print(f"Password for user '{email}' is incorrect")
+            return False
+
+    def reset_password(self, email, new_password):
+        user_info = self.user_dao.retrieve_user_information(email)
+        
+        if user_info is None:
+            print(f"email '{email}' does not exist")
+            return False
+
+        self.user_dao.update_password(email, new_password)
+        print(f"Password for user '{email}' has been updated successfully")
+        return True
