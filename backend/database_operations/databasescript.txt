@@ -1,0 +1,10 @@
+CREATE TABLE `user_info` (
+  `email` varchar(45) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `height` int DEFAULT NULL,
+  `weight` int DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
