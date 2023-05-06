@@ -48,5 +48,17 @@ def register():
     else:
         return jsonify ({'status':False ,'message' :f"Email {email} is already taken"})
     
+@app.route('/reset_password', methods=['POST'])
+def reset_password():
+    email = request.json['email']
+    new_password = request.json['new_password']
+
+    reset_successful = user_login.reset_password(email, new_password)
+
+    if reset_successful:
+        return f"Password for email {email} has been reset successfully"
+    else:
+        return f"Password reset failed for email {email}"
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
