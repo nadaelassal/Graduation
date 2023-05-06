@@ -48,3 +48,28 @@ class UserDAO:
         return self.connection.commit()
         
         
+
+class UserRegistration:
+    def __init__(self,connection,DBN):
+        self.user_dao = UserDAO(connection,DBN)
+
+    def register_user(self, email, username, password):
+        # Check if username is already taken
+        user_info = self.user_dao.retrieve_user_information(email)
+        if user_info is not None:
+            print(f"email '{email}' is already taken")
+            return False
+
+        # Hash the password using a secure algorithm
+        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+
+        # Create a User object with the provided information
+        user = User(email=email, username=username, password=hashed_password)
+
+        # Insert the user information into the database using the UserDAO object
+        self.user_dao.insert_user(user)
+
+        print(f"email '{email}' has been registered successfully")
+        return True
+
