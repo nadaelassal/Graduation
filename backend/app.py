@@ -59,6 +59,23 @@ def reset_password():
         return f"Password for email {email} has been reset successfully"
     else:
         return f"Password reset failed for email {email}"
+    
+@app.route('/add_user_info', methods=['POST'])
+def add_user_info():
+    email = request.json['email']
+    height = request.json['height']
+    weight = request.json['weight']
+    age = request.json['age']
+
+    user_dao = UserDAO(connection, db_name)
+    user_info = user_dao.retrieve_user_information(email)
+
+    if user_info is None:
+        return f"Email {email} not found in database"
+
+    user_dao.update_user_information(email, height, weight, age)
+
+    return f"User information updated for email {email}"
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
