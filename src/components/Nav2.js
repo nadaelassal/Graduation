@@ -1,26 +1,26 @@
 /* eslint-disable jsx-a11y/alt-text */
 
 import React from "react";
-import "./css code/Nav.css";
+import "./css code/nav2.css";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import pro from './pro.png';
 
-function Nav() {
+function Nav2() {
   return (
-    <div className="svm">
-      <nav className="item">
+    <div className="svm2">
+      <nav className="item2">
         <Link to="/">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo2" />
         </Link>
-        <ul className="ul">
-          <li>
+        <ul className="ul2">
+          <li className="li2">
             <Link to="/Guides">Guides</Link>
           </li>
-          <li>
+          <li className="li2">
             <Link to="/Help">Help</Link>
           </li>
-          <li>
+          <li className="li2">
             <img src={pro} className="pro"></img>
           </li>
         </ul>
@@ -28,4 +28,4 @@ function Nav() {
     </div>
   );
 }
-export default Nav;
+export default Nav2;

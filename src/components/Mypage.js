@@ -9,14 +9,14 @@ import Box from "@mui/material/Box";
 import HomeIcon from "@mui/icons-material/Home";
 import PlaceIcon from "@mui/icons-material/Place";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import SettingsIcon from "@mui/icons-material/Settings";
 import ReplyIcon from "@mui/icons-material/Reply";
 import "./css code/Mypage.css";
-import "./Nav2";
-import Nav from "./Nav2";
+import Nav2 from "./Nav2";
 import { Container } from "@mui/material";
-import profile from './pro.png';
-
+import HomeTab from "./HomeTab";
+import Map from "./Map";
+import { Link } from "react-router-dom";
+import ProfileTab from "./Profiletab";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,7 +60,7 @@ export default function VerticalTabs() {
 
   return (
     <div>
-      <Nav />
+      <Nav2/>
 
       <Container className="mycontainer">
         <Box
@@ -71,7 +71,8 @@ export default function VerticalTabs() {
             bgcolor: "#1111",
             borderRadius: 25,
             width: 50,
-            marginLeft: -20,
+            marginLeft: -18,
+            marginTop: 10,
           }}
         >
           <Tabs
@@ -82,33 +83,41 @@ export default function VerticalTabs() {
             aria-label="Vertical tabs "
             className="tabs"
           >
-            <Tab icon={<HomeIcon />} {...a11yProps(0)} />
+            <Tab
+              icon={<HomeIcon />}
+              {...a11yProps(0)}
+              style={{ minWidth: "50%" }}
+            />
             <br />
-            <Tab icon={<PlaceIcon />} {...a11yProps(1)} />
+            <Tab
+              icon={<PlaceIcon />}
+              {...a11yProps(1)}
+              style={{ minWidth: "50%" }}
+            />
             <br />
-            <Tab icon={<AccountCircleIcon />} {...a11yProps(2)} />
+            <Tab
+              icon={<AccountCircleIcon />}
+              {...a11yProps(2)}
+              style={{ minWidth: "50%" }}
+            />
             <br />
-            <Tab icon={<SettingsIcon />} {...a11yProps(3)} />
-            <br />
-            <Tab icon={<ReplyIcon />} {...a11yProps(4)} />
+            <Link to="/Content">
+              <Tab
+                icon={<ReplyIcon />}
+                {...a11yProps(3)}
+                
+              />
+            </Link>
           </Tabs>
-          <TabPanel value={value} index={0}>
-            Hi
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            Hello
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-          
-          </TabPanel>
-          <TabPanel value={value} index={6}>
-            be
-          </TabPanel>
-          <TabPanel value={value} index={8}>
-            no
-          </TabPanel>
         </Box>
       </Container>
+      <TabPanel value={value} index={0} className="panel1">
+        <HomeTab />
+      </TabPanel>
+      <TabPanel value={value} index={2} className="panel2">
+        <Map />
+      </TabPanel>
+      <TabPanel value={value} index={4} className="panel3"><ProfileTab/></TabPanel>
     </div>
   );
 }

@@ -2,15 +2,18 @@
 import React from "react";
 import "./css code/Content.css";
 import model from "./model.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import face from "./fb.png";
 import insta from "./Insta.png";
 import you from "./you.jpg";
+import Nav from "./Nav";
 
 function Content() {
+  const navigate = useNavigate();
   return (
     <div className="main_content">
+      <Nav/>
       <h1 className="move">
         Move
         <br />
@@ -27,9 +30,12 @@ function Content() {
       </p>
 
       <li className="li">
-        <Link to="/Signin" className="start-button">
+        <button
+          onClick={() => navigate("/Signin")}
+          className="start-button-get"
+        >
           Get Started
-        </Link>
+        </button>
         <Link to="/video" className="start-icon">
           <PlayCircleOutlineIcon fontSize="large" className="start-icon" />
         </Link>

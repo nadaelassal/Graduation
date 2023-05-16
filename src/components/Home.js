@@ -15,8 +15,8 @@ import MultiActionAreaCard3 from "./Card3";
 
 function Home() {
   return (
-    <div className="main">
-      <Nav2 />
+    <div className="main" >
+       <Nav2/> 
       <div className="main1">
         <h1 className="mov">
           Move
@@ -48,13 +48,17 @@ function Home() {
         <div className="phrase">
           <h1 className="sweat">Sweat</h1>
           <h2 className="challenge">3 challenges</h2>
+
         </div>
 
-        <MultiActionAreaCard />
-        <MultiActionAreaCard2 />
-        <MultiActionAreaCard3 />
+        <div className='cards'>
+          <MultiActionAreaCard />
+          <MultiActionAreaCard2 />
+          <MultiActionAreaCard3 />
+        </div>
+
       </div>
-      
+
       <div className="icons2">
         <Link to="https://www.Facebook.com">
           <img src={face} className="fb2" />

@@ -13,6 +13,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import SignUp2 from "./components/Signup2";
 import Mypage from "./components/Mypage";
+import Content from "./components/Content";
 
 
 ReactDOM.render(
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/Forget" element={<Forget/>} />
       <Route path="/Forget2" element={<Forget2/>} />
       <Route path="/Mypage" element={<Mypage/>}/>
+      <Route path="/content" element={<Content/>}/>
  
 
     </Routes>

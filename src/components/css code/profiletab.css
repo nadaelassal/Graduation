@@ -1,0 +1,83 @@
+.protab {
+  height: 100px;
+  width: 100px;
+  margin-left: 800px;
+  margin-top: -1000px;
+  margin-bottom: 500px;
+}
+.nameinput {
+  margin-left: 750px;
+  margin-top: -480px;
+}
+.update-p {
+  margin-left: 310px;
+}
+.input-holder100 {
+  margin-top: 10px;
+  margin-left: 160px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgb(213, 207, 207);
+  font-size: larger;
+}
+
+.input-holder200 {
+  margin-top: 20px;
+  margin-left: 160px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgb(213, 207, 207);
+  font-size: larger;
+}
+
+.input-holder300 {
+  margin-top: 20px;
+  margin-left: 160px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgb(213, 207, 207);
+  font-size: larger;
+}
+.button-container-confirm {
+    margin-top: 70px;
+    margin-left: 390px;
+    border-radius: 15px;
+    width: 100px;
+    height: 35px;
+    font-size: 23px;
+    cursor: pointer;
+    background-color:  #2680eb;
+    border-color: #2680eb;
+    color: white;
+  }
+
+.Tell-p{
+    margin-left: 1000px;
+    margin-top: -350px ;
+}
+
+.input-holder400 {
+    margin-top: 20px;
+    margin-left: 510px;
+    border-radius: 25px;
+    height: 250px;
+    width: 500px;
+    background-color: rgb(213, 207, 207);
+    font-size: larger;
+  }
+
+  .button-container-send {
+    margin-top: 70px;
+    margin-left: 1400px;
+    border-radius: 15px;
+    width: 100px;
+    height: 35px;
+    font-size: 23px;
+    cursor: pointer;
+    background-color:  #2680eb;
+    border-color: #2680eb;
+    color: white;
+  }

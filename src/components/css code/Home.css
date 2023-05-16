@@ -1,82 +1,102 @@
-body{
+body {
   padding: 0;
   margin: 0;
   height: 600px;
 }
-.main1 {
-    margin-left: 100px;
-    font-family: serif;
-    
-  }
-  .mov{
-   
-    font-size: 4rem;
-    margin-left: 25px;
-    margin-top: 40px;
-    color: black;
-  }
-  .cont{
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: black;
-    margin-left: 25px;
-  
-  }
-  .li2{
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-    margin-top: 40px;
-    align-items: center;
-  }
-  .str-button {
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #2680eb;
-    border-color: #2680eb;
-    color: white;
-    height: 30px;
-    width: 110px;
-  }
-  .str-icon{
-    margin-bottom: -2px;
-    cursor: pointer;
-  }
-  
-  .model2{
-    margin-left: 650px;
-    margin-top: -400px;
-    height: 550px;
-  
-  }
-  
 
-  .fb2{
-    height: 35px;
-  
-  }
-  .insta2{
-    height: 35px;
-    border-radius: 60px;
-  }
-  
-  .youtube2{
-    height: 35px;
-    border-radius: 80px;
-    
-  }
-  
-  .icons2{
-    display: flex;
-    gap: 2rem;
-    margin-top: -10px;
-    margin-left: 120px;
-    
-  }
-  .phrase{
-    margin-left: 1000px;
-    margin-top: -550px;
-    color: black;
-  }
- 
+.main {
+  /* padding-left: 100px; */
+  position: absolute;
+  z-index: 0;
+}
+
+.main1 {
+  margin-left: 250px;
+  font-family: serif;
+  margin-top: 50px;
+
+}
+
+.mov {
+
+  font-size: 3rem;
+  margin-left: -70px;
+  margin-top: 40px;
+  color: black;
+}
+
+.cont {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: black;
+  margin-left: -70px;
+
+}
+
+.li2 {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.str-button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #2680eb;
+  border-color: #2680eb;
+  color: white;
+  height: 30px;
+  width: 120px;
+  margin-left: -90px;
+  padding: 8px 12px;
+}
+
+.str-icon {
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.model2 {
+  margin-left: 500px;
+  margin-top: -400px;
+  height: 550px;
+
+}
+
+
+.fb2 {
+  height: 35px;
+
+}
+
+.insta2 {
+  height: 35px;
+  border-radius: 60px;
+}
+
+.youtube2 {
+  height: 35px;
+  border-radius: 80px;
+
+}
+
+.icons2 {
+  display: flex;
+  gap: 2rem;
+  margin-top: -10px;
+  margin-left: 170px;
+
+}
+
+.phrase {
+  margin-left: 900px;
+  margin-top: -500px;
+  color: black;
+}
+
+.cards {
+  margin-left: -100px;
+}

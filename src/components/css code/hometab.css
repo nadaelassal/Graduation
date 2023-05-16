@@ -1,0 +1,52 @@
+.BMI{
+    margin-left:80px;
+    margin-top: -25px;
+}
+.Activity{
+  margin-top: -25px;
+  margin-left: 80px;
+
+}
+.Sweat{
+   margin-left: 80px; 
+   margin-top: -25px;
+}
+.Achi{
+    margin-left: 80px; 
+    margin-top: -25px;
+}
+.pie{
+    margin-left: -140px;
+    margin-top: 15px;
+}
+.pie2{
+    margin-left: -140px ;
+}
+.cardsintab{
+    margin-left: -1070px;
+    margin-top: -20px;
+    white-space: -20px;
+
+}
+
+.card2intab{
+    margin-top: -50px;
+
+}
+.card3intab{
+    margin-top: -40px;
+  
+}
+
+.ach{
+    margin-top: 3.5px;
+    margin-left: 100px;
+}
+.ach-img{
+    margin-left: -160px;
+    margin-top: 20px;
+    border-radius: 25px;
+    height: 280px;
+    display: flex;
+
+}

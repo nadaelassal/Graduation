@@ -6,7 +6,7 @@
     margin-top: 40px;
 }
 .logo {
-  margin-left: -850px;
+  margin-left: -970px;
 }
 .item {
     display: flex;
@@ -41,7 +41,3 @@ a {
     border-color: #2680eb;
     color: white;}
 
-.pro {
-  height: 40px;
-  margin-top: -8px;
-}

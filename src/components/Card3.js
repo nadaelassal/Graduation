@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import fit from "./fit.png";
+import walk from "./walk.png";
 import { Button, CardActions } from "@mui/material";
 import "./css code/Card3.css";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ export default function MediaControlCard3() {
       <CardMedia
         component="img"
         sx={{ width: 100 }}
-        src={fit}
+        src={walk}
         alt="Fitness Trains"
       />
       <Box sx={{ display: "flex", flexDirection: "column", with: 300 }}>
