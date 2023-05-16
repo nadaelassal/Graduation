@@ -1,89 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-/*import { useState } from "react";
-import FormInput from "./FormInput";
-import { Link } from "react-router-dom";
-import "./Home";
-import log from "./log.jpg";
-import "./signin.css";
-
-const SignUp = () => {
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
-
-  const inputs = [
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      placeholder: "Enter your e-mail",
-      errorMessage: "It should be a valid email address!",
-      required: true,
-    },
-    {
-      id: 3,
-      name: "password",
-      type: "password",
-      placeholder: "Enter Password",
-      errorMessage:
-        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
-      required: true,
-    },
-  ];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
-  return (
-    <div className="app">
-      <div>
-        <img src={log} className="img" />
-      </div>
-
-      <form onSubmit={handleSubmit} className="signform">
-        <p className="welcomeb">Welcome Back !</p>
-        <div className="inputs222">
-          {inputs.map((input) => (
-            <FormInput
-              key={input.id}
-              {...input}
-              value={values[input.name]}
-              onChange={onChange}
-            />
-          ))}
-        </div>
-
-        <li>
-          <Link to="/Forget">
-            <p className="forgettt"> Forget password</p>
-          </Link>
-        </li>
-        <br />
-        <li>
-          <Link to="/Home" className="buttonn">
-            Log in
-          </Link>
-        </li>
-        <li>
-          {" "}
-          <Link to="/Signup" className="buttonnn">
-            Sign up
-          </Link>
-        </li>
-      </form>
-    </div>
-  );
-};
-
-export default SignUp;*/
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home";
@@ -109,7 +23,7 @@ function Signin() {
     return passwordPattern.test(value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const newErrors = {};
 
@@ -125,11 +39,32 @@ function Signin() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      // Login successful, navigate to home page
-      navigate("/home");
+      try {
+        const response = await fetch('/signin', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password
+          })
+        });
+        const data = await response.json();
+        if (data.status) {
+          // Login successful, navigate to home page
+          navigate("/home");
+        } else {
+          // Login failed, show error message
+          setErrors({ password: data.message });
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
 
   };
+
 
   return (
     <div>

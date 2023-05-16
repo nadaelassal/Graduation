@@ -78,7 +78,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Pattern } from "@mui/icons-material";
 import lock from "./lock.png";
-import "./forget.css";
+import "./Forget.css";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { Link } from "react-router-dom";
 import "./Signin";
