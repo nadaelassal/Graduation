@@ -36,32 +36,11 @@ function Signin() {
       newErrors.password =
         "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character";
     }
-
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      try {
-        const response = await fetch('/signin', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            password: password
-          })
-        });
-        const data = await response.json();
-        if (data.status) {
-          // Login successful, navigate to home page
-          navigate("/home");
-        } else {
-          // Login failed, show error message
-          setErrors({ password: data.message });
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      }
+      // signup successful, navigate to home page
+      navigate("/Home");
     }
 
   };

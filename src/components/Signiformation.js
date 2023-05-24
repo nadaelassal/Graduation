@@ -21,7 +21,7 @@ function Signiformation() {
           type="hight"
           name="hight"
           placeholder="Enter Your Hight"
-          value={Number}
+         
           required
         />
       </div>
@@ -32,7 +32,7 @@ function Signiformation() {
           type="Weight"
           name="Weight"
           placeholder="Enter Your Weight"
-          value={Number}
+          
           required
         />
       </div>
@@ -43,7 +43,7 @@ function Signiformation() {
           type="Age"
           name="Age"
           placeholder="Enter Your Age"
-          value={Number}
+         
           required
         />
       </div>
