@@ -119,7 +119,7 @@ function Signin() {
 
   return (
     <div>
-      <Link to="/Forget" className="backicon2">
+      <Link to="/Forgetcode" className="backicon2">
         <ArrowBackOutlinedIcon fontSize="large" className="backicon2" />
       </Link>
       <div>

@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import walk from "./walk.png";
-import { Button, CardActions } from "@mui/material";
+import {  CardActions } from "@mui/material";
 import "./css code/Card3.css";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export default function MediaControlCard3() {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: "flex", width: 370, height: 80 }} className="card3">
+    <Card sx={{ display: "flex", width: 360, height: 80 }} className="card3">
       <CardMedia
         component="img"
         sx={{ width: 100 }}

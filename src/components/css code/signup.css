@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 .sign-image {
@@ -12,46 +13,47 @@ body {
   color: #2680eb;
   font-size: 2.5rem;
   margin-left: 1070px;
-  margin-top: -600px;
+  margin-top: -650px;
   font-weight: bolder;
 }
 
 .input-holder00{
+  text-align: center;
   margin-top: 40px;
-  margin-left: 538px;
+  margin-left: 450px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
-  font-size: larger;
+  font-size: 30px;
 }
 
 .input-holder11{
+  text-align: center;
   margin-top: 40px;
-  margin-left: 538px;
+  margin-left: 450px;
+  font-size: 30px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
-  font-size: larger;
+ 
 }
 
 .input-holder22 {
+  text-align: center;
   margin-top: 30px;
-  margin-left: 538px;
+  margin-left: 450px;
+  font-size: 30px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
-  font-size: larger;
 }
 
 .signup-button22 {
   margin-top: 40px;
-  margin-left: 1150px;
-  border-radius: 15px;
+  margin-left: 1180px;
+  border-radius: 35px;
   width: 100px;
-  height: 35px;
+  height: 40px;
   font-size: 23px;
   cursor: pointer;
   background-color:  #2680eb;
@@ -59,18 +61,7 @@ body {
   color: white;
 }
 
-.signin-button22{
-  margin-top: 10px;
-  margin-left: 1150px;
-  font-size: 23px;
-  background-color:  #2680eb;
-  border-color: #2680eb;
-  color: white;
-  border-radius: 15px;
-  cursor: pointer;
-  width: 100px;
-  height: 35px
-}
+
 
 .google-button22{
   margin-left: 1100px;
@@ -80,16 +71,18 @@ body {
   color: white;
   border-radius: 15px;
   cursor: pointer;
+  width: 250px;
 }
 .facebook-button22{
   margin-top: 15px;
-  margin-left: 1090px;
+  margin-left: 1100px;
   font-size: 23px;
   background-color:  #2680eb;
   border-color: #2680eb;
   color: white;
   border-radius: 15px;
   cursor: pointer;
+  width: 250px;
 
 }
 .error {

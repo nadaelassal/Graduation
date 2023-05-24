@@ -1,49 +1,53 @@
 .protab {
   height: 100px;
   width: 100px;
-  margin-left: 800px;
+  margin-left: 700px;
   margin-top: -1000px;
-  margin-bottom: 500px;
+  margin-bottom: 510px;
 }
 .nameinput {
-  margin-left: 750px;
-  margin-top: -480px;
+  margin-left: 650px;
+  margin-top: -490px;
 }
 .update-p {
-  margin-left: 310px;
+  margin-left: 300px;
+  margin-top:140px;
 }
 .input-holder100 {
-  margin-top: 10px;
+  margin-top: -130px;
   margin-left: 160px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
   font-size: larger;
+  text-align: center;
+  font-size: 30px;
 }
 
 .input-holder200 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 160px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
   font-size: larger;
+  text-align: center;
+  font-size: 30px;
 }
 
 .input-holder300 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 160px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
   font-size: larger;
+  text-align: center;
+  font-size: 30px;
 }
 .button-container-confirm {
     margin-top: 70px;
-    margin-left: 390px;
+    margin-left: 850px;
     border-radius: 15px;
     width: 100px;
     height: 35px;
@@ -65,7 +69,6 @@
     border-radius: 25px;
     height: 250px;
     width: 500px;
-    background-color: rgb(213, 207, 207);
     font-size: larger;
   }
 

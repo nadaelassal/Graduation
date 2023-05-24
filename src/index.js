@@ -14,6 +14,8 @@ import Nav from "./components/Nav";
 import SignUp2 from "./components/Signup2";
 import Mypage from "./components/Mypage";
 import Content from "./components/Content";
+import Forgetcode from "./components/Forgetcode";
+import Signiformation from './components/Signiformation';
 
 
 ReactDOM.render(
@@ -26,11 +28,13 @@ ReactDOM.render(
       <Route path="/Signup2" element={<SignUp2/>} />
       <Route path="/Nav" element={<Nav />} />
       <Route path="/SignUp" element={<SignUp/>} />
+      <Route path="/Signiformation" element={<Signiformation/>} />
       <Route path="/Signin" element={<Signin/>} />
       <Route path="/Forget" element={<Forget/>} />
       <Route path="/Forget2" element={<Forget2/>} />
       <Route path="/Mypage" element={<Mypage/>}/>
       <Route path="/content" element={<Content/>}/>
+      <Route path="/Forgetcode" element={<Forgetcode/>}/>
  
 
     </Routes>

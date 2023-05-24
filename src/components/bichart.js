@@ -11,14 +11,14 @@ const data = [
 const PieChartComponent = () => {
   return (
     
-    <PieChart width={300} height={300} className="piechart">
+    <PieChart width={300} height={300} className="piechart" >
       <Pie
         data={data}
         dataKey="value"
         nameKey="name"
         cx="50%"
         cy="50%"
-        outerRadius={120}
+        outerRadius={90}
         fill="#8884d8"
       >
         {data.map((entry, index) => (

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home";
@@ -110,11 +111,7 @@ function Signin() {
             </button>
           </div>
         </form>
-        <div>
-          <button onClick={() => navigate("/SignUp")} className="signup-button">
-            Sign up
-          </button>
-        </div>
+        
       </div>
     </div>
   );

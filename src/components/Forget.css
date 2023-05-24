@@ -11,7 +11,7 @@ body {
 .lock-image {
   color: #2680eb;
   height: 10rem;
-  margin-top: 90px;
+  margin-top: 70px;
  margin-left: 700px;
 }
 .forgetp {
@@ -21,7 +21,7 @@ body {
 }
 .passp {
   color: #2680eb;
-  margin-left: 620px;
+  margin-left: 625px;
   font-size: xxx-large;
 }
 .provide {
@@ -38,16 +38,16 @@ body {
 
 
 .input-holder-f{
+  text-align: center;
     height: 32px;
-    font-size: 20px;
+    font-size: 30px;
     outline: none;
     border-top-style:none;
     border-right-style: none ;
     border-left-style: none ;
     border-bottom-style: 2px  solid black;
-    background-color: rgb(213, 207, 207);
     position: relative;
-    margin-left: 320px;
+    margin-left: 10px;
     margin-top: 20px;
     
 }

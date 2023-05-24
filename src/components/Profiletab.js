@@ -1,18 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import pro from "./pro.png";
 import "./css code/profiletab.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import { useNavigate } from "react-router-dom";
 
 function ProfileTab() {
+  const navigate = useNavigate();
   return (
     <div>
       <img src={pro} className="protab" />
       <h2 className="nameinput">Aliaa Mohammed</h2>
-      <h1 className="update-p">Update Your Details</h1>
+      <h1 className="update-p">Update Your Details :</h1>
       <div className="input-holder100">
         <input
           className="input-holder100"
@@ -46,22 +43,8 @@ function ProfileTab() {
         />
       </div>
 
-      <button type="submit" className="button-container-confirm">
+      <button type="submit" className="button-container-confirm" onClick={() => navigate ('/Home')}>
         Confirm
-      </button>
-
-      <h1 className="Tell-p">Tell Us If Something Doesn't Like You</h1>
-
-      <div className="input-holder400">
-        <input
-          className="input-holder400"
-          type="string"
-          name="string"
-          placeholder="Tell Us If Something Doesn't Like You"
-        />
-      </div>
-      <button type="submit" className="button-container-send">
-        Send
       </button>
     </div>
   );

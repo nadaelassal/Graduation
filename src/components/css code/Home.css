@@ -17,6 +17,10 @@ body {
 
 }
 
+.sweat{
+   font-size: 3.5rem;
+}
+
 .mov {
 
   font-size: 3rem;
@@ -50,12 +54,13 @@ body {
   color: white;
   height: 30px;
   width: 120px;
+  margin-top: 70px;
   margin-left: -90px;
   padding: 8px 12px;
 }
 
 .str-icon {
-  margin-bottom: -2px;
+  margin-bottom: -33px;
   cursor: pointer;
 }
 
@@ -86,14 +91,14 @@ body {
 .icons2 {
   display: flex;
   gap: 2rem;
-  margin-top: -10px;
+  
   margin-left: 170px;
 
 }
 
 .phrase {
   margin-left: 900px;
-  margin-top: -500px;
+  margin-top: -550px;
   color: black;
 }
 

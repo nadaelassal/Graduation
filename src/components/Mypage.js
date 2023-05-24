@@ -67,7 +67,7 @@ export default function VerticalTabs() {
           sx={{
             flexGrow: 1,
             display: "flex",
-            height: 550,
+            height: 500,
             bgcolor: "#1111",
             borderRadius: 25,
             width: 50,

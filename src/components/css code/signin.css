@@ -10,62 +10,49 @@ body {
 
 .welcome-p {
   color: #2680eb;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-left: 1070px;
-  margin-top: -600px;
+  margin-top: -550px;
   font-weight: bolder;
 }
 
 .input-holder1 {
+  text-align: center;
   margin-top: 40px;
-  margin-left: 538px;
+  margin-left: 470px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
-  font-size: larger;
+  font-size: 30px;
 }
 
 .input-holder2 {
+  text-align: center;
   margin-top: 30px;
-  margin-left: 538px;
+  margin-left: 470px;
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: rgb(213, 207, 207);
-  font-size: larger;
+  font-size: 30px;
 }
 
 .button-container-login {
   margin-top: 90px;
   margin-left: 1150px;
-  border-radius: 15px;
-  width: 100px;
-  height: 35px;
-  font-size: 23px;
+  border-radius: 35px;
+  width: 120px;
+  height: 50px;
+  font-size: 25px;
   cursor: pointer;
   background-color: #2680eb;
   border-color: #2680eb;
   color: white;
-}
-
-.signup-button {
-  margin-top: 40px;
-  margin-left: 1150px;
-  font-size: 23px;
-  background-color: #2680eb;
-  border-color: #2680eb;
-  color: white;
-  border-radius: 15px;
-  cursor: pointer;
-  width: 100px;
-  height: 35px;
 }
 
 .forget-button {
   margin-top: 10px;
-  margin-left: 1060px;
-  font-size: large;
+  margin-left: 1080px;
+  font-size: x-large;
   color: rgb(75, 75, 75);
 }
 
@@ -89,7 +76,3 @@ body {
   font-size: 16px;
   color: black;
 }
-
-
-
-

@@ -1,0 +1,74 @@
+.backbutton000 {
+  color: #2680eb;
+  margin-left: 15px;
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+.code {
+  margin-left: 700px;
+  margin-top: 90px;
+  color: #2680eb;
+  font-size: xxx-large;
+  line-height: 1 rem;
+}
+.verfiy {
+  margin-left: 650px;
+  color: #2680eb;
+  margin-top: 10px;
+  font-size: 3rem;
+  font-weight: 100;
+}
+.input-box1 {
+  margin-top: 10px;
+  margin-left: 300px;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(213, 207, 207);
+}
+.textfeild {
+  background-color: aliceblue;
+}
+#first {
+  color: #2680eb;
+  text-align: center;
+}
+#sec {
+  color: #2680eb;
+  text-align: center;
+}
+#third {
+  color: #2680eb;
+  text-align: center;
+}
+#fourth {
+  color: #2680eb;
+  text-align: center;
+}
+#fifth {
+  color: #2680eb;
+  text-align: center;
+}
+.button-container-Nextforget {
+  padding: 10px;
+  border: none;
+  background-color: #2680eb;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 730px;
+  margin-top: 50px;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+}
+.resend{
+  margin-left: 710px ;
+  font-weight: 10;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 25px;
+
+}

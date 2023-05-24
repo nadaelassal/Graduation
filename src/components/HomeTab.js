@@ -22,15 +22,15 @@ const HomeTab = () => {
           sx={{
             flexGrow: 1,
             display: "flex",
-            height: 310,
-            bgcolor: "#1111",
+            height: 270,
             borderRadius: 25,
-            width: 450,
-            marginLeft: 5,
-            marginTop: -80,
+            width: 320,
+            marginLeft: 2,
+            marginTop: -75,
+            boxShadow: 10,
           }}
         >
-          <h3 className="BMI">BMI Calculator</h3>
+          <h3 className="BMI">BMI </h3>
           <div className="pie">
             <PieChartComponent />
           </div>
@@ -42,11 +42,11 @@ const HomeTab = () => {
             flexGrow: 1,
             display: "flex",
             height: 315,
-            bgcolor: "#1111",
             borderRadius: 25,
             width: 650,
             marginTop: 3.5,
-            marginLeft: 5,
+            marginLeft: 30,
+            boxShadow: 10,
           }}
         >
           <h3 className="Activity">Activity</h3>
@@ -60,12 +60,12 @@ const HomeTab = () => {
           sx={{
             flexGrow: 1,
             display: "flex",
-            height: 315,
-            bgcolor: "#1111",
+            height: 280,
             borderRadius: 25,
-            width: 500,
-            marginTop: -80,
+            width: 480,
+            marginTop: -75,
             marginLeft: 100,
+            boxShadow: 10,
           }}
         >
           <h3 className="Sweat">Sweat</h3>
@@ -86,12 +86,12 @@ const HomeTab = () => {
       <Card
         sx={{
           display: "flex",
-          width: 500,
-          height: 315,
-          marginTop: 2.5,
-          marginLeft: 131,
+          width: 370,
+          height: 270,
+          marginTop: -37,
+          marginLeft: 68,
           borderRadius: 25,
-          backgroundColor: "rgb(213, 207, 207)",
+          boxShadow: 10,
         }}
         className="arch"
       >
@@ -101,16 +101,16 @@ const HomeTab = () => {
             <Typography component="div" variant="h5">
               Bicep Train : <Percent />{" "}
             </Typography>
-            <Typography component="div" variant="h5" >
+            <Typography component="div" variant="h5">
               Tricep Train : <Percent />
             </Typography>
-            <Typography component="div" variant="h5" >
+            <Typography component="div" variant="h5">
               Leg Train : <Percent />
             </Typography>
-        
           </CardContent>
         </Box>
       </Card>
+      <h3 className="Ahcievment">Ahcievment</h3>
     </div>
   );
 };

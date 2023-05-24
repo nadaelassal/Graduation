@@ -13,7 +13,7 @@ function SignUp2() {
       </div>
       <h1 className="wel">Welcome MR Ali</h1>
       <br />
-      <p className="pl">Please put picture of you</p>
+      <p className="plz">Please put picture of you</p>
       <img src={men} className="men" />
       <li>
         <Link to="/" className="b1">

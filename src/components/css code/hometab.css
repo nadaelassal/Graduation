@@ -1,52 +1,51 @@
-.BMI{
-    margin-left:80px;
-    margin-top: -25px;
+.BMI {
+  margin-left: 80px;
+  margin-top: -25px;
 }
-.Activity{
+.Activity {
   margin-top: -25px;
   margin-left: 80px;
-
 }
-.Sweat{
-   margin-left: 80px; 
-   margin-top: -25px;
+.Sweat {
+  margin-left: 80px;
+  margin-top: -25px;
 }
-.Achi{
-    margin-left: 80px; 
-    margin-top: -25px;
+.Ahcievment {
+  margin-left: 610px;
+  margin-top: -295px;
 }
-.pie{
-    margin-left: -140px;
-    margin-top: 15px;
+.Achi {
+  margin-left: 80px;
+  margin-top: -15px;
 }
-.pie2{
-    margin-left: -140px ;
+.pie {
+  margin-left: -100px;
+  margin-top: -8px;
 }
-.cardsintab{
-    margin-left: -1070px;
-    margin-top: -20px;
-    white-space: -20px;
-
+.pie2 {
+  margin-left: -140px;
 }
-
-.card2intab{
-    margin-top: -50px;
-
-}
-.card3intab{
-    margin-top: -40px;
-  
+.cardsintab {
+  margin-left: -1070px;
+  margin-top: -29px;
+  white-space: -20px;
 }
 
-.ach{
-    margin-top: 3.5px;
-    margin-left: 100px;
+.card2intab {
+  margin-top: -50px;
 }
-.ach-img{
-    margin-left: -160px;
-    margin-top: 20px;
-    border-radius: 25px;
-    height: 280px;
-    display: flex;
+.card3intab {
+  margin-top: -40px;
+}
 
+.ach {
+  margin-top: 3.5px;
+  margin-left: 100px;
+}
+.ach-img {
+  margin-left: -160px;
+  margin-top: 20px;
+  border-radius: 25px;
+  height: 280px;
+  display: flex;
 }

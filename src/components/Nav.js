@@ -3,9 +3,10 @@
 import React from "react";
 import "./css code/Nav.css";
 import logo from "./logo.png";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 
 function Nav() {
+  const navigate = useNavigate();
   return (
     <div className="svm">
       <nav className="item">
@@ -20,9 +21,12 @@ function Nav() {
             <Link to="/Help">Help</Link>
           </li>
           <li>
-            <Link to="/SignUp" className="sign_button">
-              Sign Up
-            </Link>
+          <button
+          onClick={() => navigate("/SignUp")}
+          className="signup-button-get"
+        >
+          Sign up
+        </button>
           </li>
         </ul>
       </nav>

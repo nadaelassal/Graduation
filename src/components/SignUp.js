@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./css code/signup.css"
+import { useNavigate } from "react-router-dom";
+import "./css code/signup.css";
 import "./Home";
 import sign from "./sign.jpg";
-import axios from 'axios';
 
 function SignUp() {
   const [username, setUsername] = useState("");
@@ -39,27 +39,10 @@ function SignUp() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      // signup successful, register user
-      axios.post('/register', {
-        username: username,
-        email: email,
-        password: password
-      }).then((response) => {
-   
-        if (response.data['status']==true){
-         
-          navigate("/home");
-        }
-        else {
-
-          setErrors({ password: response.data['message'] });
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
+      // signup successful, navigate to home page
+      navigate("/Signiformation");
     }
   };
-
 
   return (
     <div>
@@ -109,28 +92,26 @@ function SignUp() {
 
           <div>
             <button type="submit" className="signup-button22">
-             Sign up
+              Sign up
             </button>
           </div>
         </form>
-        <div>
-          <button onClick={() => navigate("/Signin")} className="signin-button22">
-            Login
-          </button>
-        </div>
-        <br/>
-        <div>
-          <Link to="https://www.google.com" className="google-button22">
-            Sign in with Google
-          </Link>
-  
-        </div>
-        <br/>
-        <div>
-          <Link to="https://www.facebook.com" className="facebook-button22">
-          Sign in with Facebook
-          </Link>
-        </div>
+
+        <br />
+
+        <button
+          onClick={() => window.open("https://www.google.com")}
+          className="google-button22"
+        >
+          Sign up with google
+        </button>
+
+        <button
+          onClick={() => window.open("https://www.facebook.com")}
+          className="facebook-button22"
+        >
+          Sign up with facebook
+        </button>
       </div>
     </div>
   );
