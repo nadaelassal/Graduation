@@ -11,7 +11,7 @@ body {
 
 .welcome-p2 {
   color: #2680eb;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-left: 1070px;
   margin-top: -650px;
   font-weight: bolder;
@@ -19,19 +19,20 @@ body {
 
 .input-holder00{
   text-align: center;
-  margin-top: 40px;
-  margin-left: 450px;
+  margin-top: 30px;
+  margin-left: 1095px;
+  width: 280px;
   border-left: none;
   border-right: none;
   border-top: none;
-  font-size: 30px;
+
 }
 
 .input-holder11{
   text-align: center;
-  margin-top: 40px;
-  margin-left: 450px;
-  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 1095px;
+  width: 280px;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -40,9 +41,19 @@ body {
 
 .input-holder22 {
   text-align: center;
-  margin-top: 30px;
-  margin-left: 450px;
-  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 1095px;
+  width: 280px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.input-holder33 {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 1095px;
+  width: 280px;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -85,12 +96,7 @@ body {
   width: 250px;
 
 }
-.error {
-  color: red;
-  font-size: 16px;
-  margin-top: 5px;
-  margin-left: 538px;
-}
+
 
 .success {
   color: green;

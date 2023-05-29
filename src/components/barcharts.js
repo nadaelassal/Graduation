@@ -15,7 +15,7 @@ const BarChartComponent = () => {
   return (
     <div>
       <div style={{ margin: "20px" }}>
-        <LineChart width={600} height={300} data={chartData}>
+        <LineChart width={550} height={250} data={chartData}>
           <CartesianGrid strokeDasharray="0" vertical={false} />
           <Tooltip />
           <XAxis dataKey="name" />

@@ -19,21 +19,22 @@ body {
 .input-holder1 {
   text-align: center;
   margin-top: 40px;
-  margin-left: 470px;
+  margin-left: 1095px;
   border-left: none;
   border-right: none;
   border-top: none;
-  font-size: 30px;
+  width: 280px;
 }
 
 .input-holder2 {
   text-align: center;
   margin-top: 30px;
-  margin-left: 470px;
+  margin-left: 1095px;
+  width: 280px;
   border-left: none;
   border-right: none;
   border-top: none;
-  font-size: 30px;
+
 }
 
 .button-container-login {

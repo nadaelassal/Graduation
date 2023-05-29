@@ -1,14 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css code/signup.css";
 import "./Home";
 import sign from "./sign.jpg";
+import { TextField } from "@mui/material";
+
+
 
 function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState();
+  const [cpassword, setcPassword] = useState();
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
@@ -22,11 +27,15 @@ function SignUp() {
       /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
     return passwordPattern.test(value);
   };
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const newErrors = {};
-
+     
+    if (cpassword !== password ) {
+      newErrors.cpassword="password doesn't match"
+    }
     if (!validateEmail(email)) {
       newErrors.email = "Invalid email format";
     }
@@ -35,7 +44,6 @@ function SignUp() {
       newErrors.password =
         "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character";
     }
-
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
@@ -54,10 +62,9 @@ function SignUp() {
         <form onSubmit={handleSubmit}>
           <div className="welcome-p2">Welcome champ</div>
           <div className="input-holder00">
-            <input
+            <TextField
               className="input-holder00"
-              type="text"
-              name="username"
+              label="Name"
               placeholder="Enter Your Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -66,10 +73,9 @@ function SignUp() {
           </div>
 
           <div className="input-holder11">
-            <input
+            <TextField
               className="input-holder11"
-              type="email"
-              name="email"
+              label="Email"
               placeholder="Enter Your E-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -78,18 +84,31 @@ function SignUp() {
             {errors.email && <div className="error">{errors.email}</div>}
           </div>
           <div className="input-holder22">
-            <input
+            <TextField
               className="input-holder22"
-              type="password"
-              name="password"
+              label="Password"
               placeholder="Enter Your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            {errors.password && <div className="error">{errors.password}</div>}
+            {errors.password && (
+              <div className="error-pass">{errors.password}</div>
+            )}
           </div>
-
+          <div className="input-holder33">
+            <TextField
+              className="input-holder33"
+              label="Confirm Password"
+              placeholder="Confirm Password"
+              value={cpassword}
+              onChange={(e) => setcPassword(e.target.value)}
+              required
+            />
+            {errors.cpassword && (
+              <div className="error-conf">{errors.cpassword}</div>
+            )}
+          </div>
           <div>
             <button type="submit" className="signup-button22">
               Sign up
