@@ -1,38 +1,51 @@
 .BMI {
-  margin-left: 80px;
+  margin-left: 25px;
   margin-top: -25px;
 }
 .Activity {
   margin-top: -25px;
-  margin-left: 80px;
+  margin-left: 25px;
 }
 .Sweat {
-  margin-left: 80px;
+  margin-left: 25px;
   margin-top: -25px;
 }
 .Ahcievment {
-  margin-left: 610px;
-  margin-top: -295px;
+  margin-left: 650px;
+  margin-top: -275px;
 }
 .Achi {
   margin-left: 80px;
   margin-top: -15px;
 }
 .pie {
-  margin-left: -100px;
-  margin-top: -8px;
+  margin-left: -200px;
+  margin-top: -35px;
+}
+.weight{
+  margin-top: -230px;
+  margin-left: 280px;
+}
+.Fit-weight{
+  margin-top: 5px;
+  margin-left:280px;
+}
+.Fats{
+  margin-top: 5px;
+  margin-left: 280px;
 }
 .pie2 {
-  margin-left: -140px;
+  margin-left: -85px;
 }
 .cardsintab {
-  margin-left: -1070px;
+  margin-left: -1045px;
   margin-top: -29px;
   white-space: -20px;
 }
 
 .card2intab {
   margin-top: -50px;
+
 }
 .card3intab {
   margin-top: -40px;

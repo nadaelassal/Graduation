@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home";
 import "./css code/signin.css";
 import { Pattern } from "@mui/icons-material";
+import TextField from "@mui/material/TextField";
 import log from "./log.jpg";
 import "./SignUp";
 
@@ -42,9 +43,7 @@ function Signin() {
       // signup successful, navigate to home page
       navigate("/Home");
     }
-
   };
-
 
   return (
     <div>
@@ -56,22 +55,22 @@ function Signin() {
         <form onSubmit={handleSubmit}>
           <div className="welcome-p">Welcome Back !</div>
           <div className="input-holder1">
-            <input
+            <TextField
               className="input-holder1"
-              type="email"
-              name="email"
-              placeholder="Enter Your E-mail"
+              id="outlined-basic"
+              label=" E-mail"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-            />
+            ></TextField>
             {errors.email && <div className="error">{errors.email}</div>}
           </div>
           <div className="input-holder2">
-            <input
+            <TextField
+              id="outlined-basic"
               className="input-holder2"
-              type="password"
-              name="password"
+              label="Password"
               placeholder="Enter Your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -79,6 +78,7 @@ function Signin() {
             />
             {errors.password && <div className="error">{errors.password}</div>}
           </div>
+
           <li>
             <Link to="/Forget">
               <p className="forget-button"> Forget password</p>
@@ -90,7 +90,6 @@ function Signin() {
             </button>
           </div>
         </form>
-        
       </div>
     </div>
   );

@@ -22,17 +22,20 @@ const HomeTab = () => {
           sx={{
             flexGrow: 1,
             display: "flex",
-            height: 270,
-            borderRadius: 25,
-            width: 320,
+            height: 230,
+            borderRadius: 5,
+            width: 380,
             marginLeft: 2,
-            marginTop: -75,
+            marginTop: -70,
             boxShadow: 10,
           }}
         >
-          <h3 className="BMI">BMI </h3>
+          <h3 className="BMI">BMI Calculator </h3>
           <div className="pie">
             <PieChartComponent />
+            <p className="weight"> Your weight <br/> 60 K</p>
+            <p className="Fit-weight">Fit weight <br/> 65 K</p>
+            <p className="Fats">Fats  <br/> 12 K</p>
           </div>
         </Box>
       </Container>
@@ -41,11 +44,11 @@ const HomeTab = () => {
           sx={{
             flexGrow: 1,
             display: "flex",
-            height: 315,
-            borderRadius: 25,
-            width: 650,
-            marginTop: 3.5,
-            marginLeft: 30,
+            height: 260,
+            borderRadius: 5,
+            width: 590,
+            marginTop: 9,
+            marginLeft: 45,
             boxShadow: 10,
           }}
         >
@@ -61,17 +64,17 @@ const HomeTab = () => {
             flexGrow: 1,
             display: "flex",
             height: 280,
-            borderRadius: 25,
-            width: 480,
-            marginTop: -75,
-            marginLeft: 100,
+            borderRadius: 5,
+            width: 420,
+            marginTop: -73,
+            marginLeft: 110,
             boxShadow: 10,
           }}
         >
           <h3 className="Sweat">Sweat</h3>
           <div className="cardsintab">
             <div className="card1intab">
-              <MultiActionAreaCard />
+              <MultiActionAreaCard  />
             </div>
             <div className="card2intab">
               {" "}
@@ -83,14 +86,15 @@ const HomeTab = () => {
           </div>
         </Box>
       </Container>
+    
       <Card
         sx={{
           display: "flex",
-          width: 370,
-          height: 270,
-          marginTop: -37,
-          marginLeft: 68,
-          borderRadius: 25,
+          width: 350,
+          height: 250,
+          marginTop: -33,
+          marginLeft: 78,
+          borderRadius: 5,
           boxShadow: 10,
         }}
         className="arch"
@@ -98,19 +102,21 @@ const HomeTab = () => {
         <CardMedia component="img" sx={{ width: 160 }} src={ach} />
         <Box sx={{ display: "flex", flexDirection: "column", with: 300 }}>
           <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography component="div" variant="h5">
+            <Typography component="div" variant="h6">
               Bicep Train : <Percent />{" "}
             </Typography>
-            <Typography component="div" variant="h5">
+            <Typography component="div" variant="h6">
               Tricep Train : <Percent />
             </Typography>
-            <Typography component="div" variant="h5">
+            <Typography component="div" variant="h6">
               Leg Train : <Percent />
             </Typography>
           </CardContent>
         </Box>
+       
       </Card>
       <h3 className="Ahcievment">Ahcievment</h3>
+      
     </div>
   );
 };

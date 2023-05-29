@@ -18,7 +18,7 @@ const PieChartComponent = () => {
         nameKey="name"
         cx="50%"
         cy="50%"
-        outerRadius={90}
+        outerRadius={80}
         fill="#8884d8"
       >
         {data.map((entry, index) => (
