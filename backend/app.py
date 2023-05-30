@@ -1,5 +1,8 @@
 import datetime
-from flask import Flask, jsonify,Flask, request ,render_template 
+from flask import Flask, jsonify,Flask, request 
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import random , smtplib 
 from backend.database_operations.mysql_credentials_reader import MysqlCredentials
 from backend.database_operations.mysql_connection import DatabaseConnection
 from backend.database_operations.user import UserDAO, UserLogin, UserRegistration
@@ -9,6 +12,7 @@ db_name = 'ai_trainer'
 credentials =  MysqlCredentials.get_mysql_credentials()
 connection = DatabaseConnection.connect_to_mysql_server(credentials['DBN'],credentials['mysql_username'],credentials['mysql_pwd'],credentials['mysql_host'])
 user_login = UserLogin(connection, db_name)
+
 
 
 
@@ -110,7 +114,34 @@ def calculate_fit_weight_bmi():
     response = f"Your BMI is {bmi:.2f} , which is considered {weight_status}. "
     response += f"Your fit weight is {fit_weight:.2f} kg."
     return response
-    
+
+#otp by email
+@app.route('/send_otp', methods=['POST'])
+def send_otp():
+       # Get the email address from the request
+       email = request.json['email']
+       user_info = user_login.user_dao.retrieve_user_information(email)
+       if user_info is not None:
+       # Generate a random 6-digit OTP
+        otp = str(random.randint(100000, 999999))
+       # Create the email message
+        message = MIMEMultipart()
+        message['From'] = 'amirahelmi01@gmail.com'
+        message['To'] = email
+        message['Subject'] = 'OTP for your account'
+        body = f'Your OTP is {otp}'
+        message.attach(MIMEText(body, 'plain'))
+       # Send the email
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+           server.starttls()
+           server.login('amirahelmi01@gmail.com', 'jits fzrx hkwy bnab')
+           text = message.as_string()
+           server.sendmail('amirahelmi01@gmail.com', email, text)
+        return {'message': 'OTP sent successfully.'}
+       else:
+           return "sorry, can't find the email"
+           
+
 
    
 
