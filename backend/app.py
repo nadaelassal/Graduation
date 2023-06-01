@@ -1,57 +1,69 @@
 import datetime
-from flask import Flask, jsonify,Flask, request
+import os
+from flask import Flask, jsonify, Flask, request, redirect, url_for
 from backend.database_operations.mysql_credentials_reader import MysqlCredentials
 from backend.database_operations.mysql_connection import DatabaseConnection
 from backend.database_operations.user import UserDAO, UserLogin, UserRegistration
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-db_name = 'ai_trainer'
-credentials =  MysqlCredentials.get_mysql_credentials()
-connection = DatabaseConnection.connect_to_mysql_server(credentials['DBN'],credentials['mysql_username'],credentials['mysql_pwd'],credentials['mysql_host'])
+db_name = "ai_trainer"
+credentials = MysqlCredentials.get_mysql_credentials()
+connection = DatabaseConnection.connect_to_mysql_server(
+    credentials["DBN"],
+    credentials["mysql_username"],
+    credentials["mysql_pwd"],
+    credentials["mysql_host"],
+)
 user_login = UserLogin(connection, db_name)
 
 
-
-@app.route('/check_user', methods=['POST'])
+@app.route("/check_user", methods=["POST"])
 def check_user():
-    email = request.json['email']
+    email = request.json["email"]
     user_info = user_login.user_dao.retrieve_user_information(email)
     if user_info is not None:
-        return jsonify({'exists': True})
+        return jsonify({"exists": True})
     else:
-        return jsonify({'exists': False})
+        return jsonify({"exists": False})
 
-@app.route('/signin', methods=['POST'])
+
+@app.route("/signin", methods=["POST"])
 def login():
-    email = request.json['email']
-    password = request.json['password']
-    authenticated = UserLogin(connection,db_name ).authenticate_user(email, password)
+    email = request.json["email"]
+    password = request.json["password"]
+    authenticated = UserLogin(connection, db_name).authenticate_user(email, password)
     if authenticated:
         # login successful
-        return jsonify({'status':True,'message': 'Login successful'})
+        return jsonify({"status": True, "message": "Login successful"})
     else:
         # login failed
-        return jsonify({'status':False,'message': 'Login failed'})
-    
-user_registration = UserRegistration(connection,db_name )
+        return jsonify({"status": False, "message": "Login failed"})
 
-@app.route('/register', methods=['POST'])
+
+user_registration = UserRegistration(connection, db_name)
+
+
+@app.route("/register", methods=["POST"])
 def register():
-    email = request.json['email']
-    username = request.json['username']
-    password = request.json['password']
+    email = request.json["email"]
+    username = request.json["username"]
+    password = request.json["password"]
 
     registered = user_registration.register_user(email, username, password)
 
     if registered:
-        return jsonify ({'status':True ,'message' :f"email {email} registered successfully"})
+        return jsonify(
+            {"status": True, "message": f"email {email} registered successfully"}
+        )
     else:
-        return jsonify ({'status':False ,'message' :f"Email {email} is already taken"})
-    
-@app.route('/reset_password', methods=['POST'])
+        return jsonify({"status": False, "message": f"Email {email} is already taken"})
+
+
+@app.route("/reset_password", methods=["POST"])
 def reset_password():
-    email = request.json['email']
-    new_password = request.json['new_password']
+    email = request.json["email"]
+    new_password = request.json["new_password"]
 
     reset_successful = user_login.reset_password(email, new_password)
 
@@ -59,13 +71,14 @@ def reset_password():
         return f"Password for email {email} has been reset successfully"
     else:
         return f"Password reset failed for email {email}"
-    
-@app.route('/add_user_info', methods=['POST'])
+
+
+@app.route("/add_user_info", methods=["POST"])
 def add_user_info():
-    email = request.json['email']
-    height = request.json['height']
-    weight = request.json['weight']
-    age = request.json['age']
+    email = request.json["email"]
+    height = request.json["height"]
+    weight = request.json["weight"]
+    age = request.json["age"]
 
     user_dao = UserDAO(connection, db_name)
     user_info = user_dao.retrieve_user_information(email)
@@ -77,5 +90,24 @@ def add_user_info():
 
     return f"User information updated for email {email}"
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+
+@app.route("/upload-image", methods=["POST"])
+def upload_image():
+    print(request.files)
+    if "image" not in request.files:
+        return "No image file found"
+    image = request.files["image"]
+    print(image)
+    if image.filename == "":
+        return "No image selected"
+    if image:
+        filename = secure_filename(image.filename)
+        # image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+        dbPath = os.path.join("uploads", filename)
+        # Save dbPath to database
+        image.save(dbPath)
+        return "Image successfully uploaded!"
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
