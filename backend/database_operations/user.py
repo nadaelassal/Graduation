@@ -100,13 +100,4 @@ class UserLogin:
         print(f"Password for user '{email}' has been updated successfully")
         return True
 
-    def reset_password(self, email, new_password):
-        user_info = self.user_dao.retrieve_user_information(email)
-        
-        if user_info is None:
-            print(f"email '{email}' does not exist")
-            return False
-
-        self.user_dao.update_password(email, new_password)
-        print(f"Password for user '{email}' has been updated successfully")
-        return True
+    

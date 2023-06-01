@@ -1,6 +1,9 @@
 import datetime
 import os
 from flask import Flask, jsonify, Flask, request, redirect, url_for
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import random, smtplib
 from backend.database_operations.mysql_credentials_reader import MysqlCredentials
 from backend.database_operations.mysql_connection import DatabaseConnection
 from backend.database_operations.user import UserDAO, UserLogin, UserRegistration
@@ -107,6 +110,68 @@ def upload_image():
         # Save dbPath to database
         image.save(dbPath)
         return "Image successfully uploaded!"
+
+
+@app.route("/fit_weight_bmi", methods=["POST"])
+def calculate_fit_weight_bmi():
+    # Get data
+    weight = float(request.json["weight"])
+    height = float(request.json["height"])
+    gender = request.json["gender"]
+
+    # Calculate BMI
+    bmi = weight / (height**2)
+
+    #  weight status based on BMI
+    if bmi < 18.4:
+        weight_status = "underweight"
+    elif 18.5 <= bmi < 24.9:
+        weight_status = "normal"
+    elif 25.0 <= bmi < 39.9:
+        weight_status = "overweight"
+    else:
+        weight_status = "obese"
+
+    #  ideal BMI based on gender
+    if gender == "male":
+        ideal_bmi = 23
+    else:
+        ideal_bmi = 22
+
+    # Calculate fit weight based on ideal BMI and height
+    fit_weight = ideal_bmi * (height**2)
+
+    # Construct response message
+    response = f"Your BMI is {bmi:.2f} , which is considered {weight_status}. "
+    response += f"Your fit weight is {fit_weight:.2f} kg."
+    return response
+
+
+# otp by email
+@app.route("/send_otp", methods=["POST"])
+def send_otp():
+    # Get the email address from the request
+    email = request.json["email"]
+    user_info = user_login.user_dao.retrieve_user_information(email)
+    if user_info is not None:
+        # Generate a random 6-digit OTP
+        otp = str(random.randint(100000, 999999))
+        # Create the email message
+        message = MIMEMultipart()
+        message["From"] = "amirahelmi01@gmail.com"
+        message["To"] = email
+        message["Subject"] = "OTP for your account"
+        body = f"Your OTP is {otp}"
+        message.attach(MIMEText(body, "plain"))
+        # Send the email
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login("amirahelmi01@gmail.com", "jits fzrx hkwy bnab")
+            text = message.as_string()
+            server.sendmail("amirahelmi01@gmail.com", email, text)
+        return {"message": "OTP sent successfully."}
+    else:
+        return "sorry, can't find the email"
 
 
 if __name__ == "__main__":
