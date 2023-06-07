@@ -128,8 +128,8 @@ def send_otp():
         message = MIMEMultipart()
         message['From'] = 'amirahelmi01@gmail.com'
         message['To'] = email
-        message['Subject'] = 'OTP for your account'
-        body = f'Your OTP is {otp}'
+        message['Subject'] = 'Verification Code for your account'
+        body = f'Your code is {otp}'
         message.attach(MIMEText(body, 'plain'))
        # Send the email
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
