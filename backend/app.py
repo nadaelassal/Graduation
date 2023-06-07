@@ -137,7 +137,7 @@ def send_otp():
            server.login('amirahelmi01@gmail.com', 'jits fzrx hkwy bnab')
            text = message.as_string()
            server.sendmail('amirahelmi01@gmail.com', email, text)
-        return {'message': 'OTP sent successfully.'}
+        return {'message': 'Verification Code sent successfully.'}
        else:
            return "sorry, can't find the email"
            
