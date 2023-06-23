@@ -1,6 +1,6 @@
 import datetime
 import os
-from flask import Flask, jsonify, Flask, request, redirect, url_for
+from flask import Flask, jsonify, Flask, request
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import random, smtplib
