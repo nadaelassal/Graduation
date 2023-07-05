@@ -2087,7 +2087,7 @@ def back_squats_live():
         # Release video capture and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"Back Squats done the counts are{back_squat_counter}"
+        return f"Back Squats done the counts are {back_squat_counter}"
 
 
 @app.route("/yoga_live", methods=["POST"])
