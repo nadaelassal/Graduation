@@ -1292,7 +1292,7 @@ def Bicep_live():
         cap.release()
         cv2.destroyAllWindows()
 
-        return f"Bicep curl done the counts are {curl_count}"
+        return f"Bicep curl live done the counts are {curl_count}"
 
 
 @app.route("/push_up_live", methods=["POST"])
@@ -1414,7 +1414,7 @@ def push_up_live():
         # Release video and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"push up done the counts are {pushup_jack_count}"
+        return f"push up live  done the counts are {pushup_jack_count}"
 
 
 @app.route("/push_up_hold_live", methods=["POST"])
@@ -1554,7 +1554,7 @@ def push_up_hold_live():
         # Release video and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return "push up hold detection completed."
+        return "push up hold live detection completed."
 
 
 @app.route("/shoulder_press_live", methods=["POST"])
@@ -1679,7 +1679,7 @@ def shoulder_press_live():
         # Release video capture and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"shoulder press done the counts are {shoulder_press_counter}"
+        return f"shoulder press live done the counts are {shoulder_press_counter}"
 
 
 @app.route("/front_raise_live", methods=["POST"])
@@ -1809,7 +1809,7 @@ def front_raise_live():
         # Release video capture and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"Front Raise done the counts are {front_raise_counter}"
+        return f"Front Raise live done the counts are {front_raise_counter}"
 
 
 @app.route("/front_squats_live", methods=["POST"])
@@ -1934,7 +1934,7 @@ def front_squats_live():
         # Release video capture and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"Front Squats done the counts are {front_squat_counter}"
+        return f"Front Squats live done the counts are {front_squat_counter}"
 
 
 @app.route("/back_squats_live", methods=["POST"])
@@ -2087,7 +2087,7 @@ def back_squats_live():
         # Release video capture and close windows
         cap.release()
         cv2.destroyAllWindows()
-        return f"Back Squats done the counts are {back_squat_counter}"
+        return f"Back Squats live done the counts are {back_squat_counter}"
 
 
 @app.route("/yoga_live", methods=["POST"])
@@ -2176,7 +2176,7 @@ def yoga_live():
 
     cap.release()
     cv2.destroyAllWindows()
-    return "Yoga detection completed."
+    return "Yoga live detection completed."
 
 
 if __name__ == "__main__":
